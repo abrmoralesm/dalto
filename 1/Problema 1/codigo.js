@@ -1,22 +1,63 @@
+const transactions = [
+    { user: 'Alice', amount: 100 },
+    { user: 'Bob', amount: 200 },
+    { user: 'Alice', amount: 50 },
+    { user: 'Charlie', amount: 75 },
+    { user: 'Alice', amount: 25 }
+  ];
+
+
+
+jhh
+
+
+
+
 const posts = [{
 id:1,
 title: 'Mi primer post',
 image: 'https://img.com',
 tags: ['javascript', 'webdevelopment'],
+puntacion: 20,
 
 },{
     id:2,
     title: 'Mi experiencia con React',
     image: 'https://img.com/2',
     tags: ['javascript', 'webdevelopment', 'react'],
+    puntacion: 30,
 },{
     id:3,
 title: 'Por qué dejé Angular',
 image: 'https://img.com/3',
 tags: ['javascript', 'webdevelopment', 'angular'],
+puntuacion: 13,
 }
 ]
 
+const totalPuntuacion = posts.reduce((acumulador, post) => {
+    return acumulador + post.puntuacion;
+  }, 0);
+  
+  console.log(totalPuntuacion);
+const totala = posts.reduce((acumulador,sum)=>{
+    return acumulador+sum.puntuacion;
+},0);
+console.log(totala);
+
+
+const numbers =[2,3,4,5,6];
+const sumaTotal = numbers.reduce((acumulador,redu)=>{
+    return acumulador+redu
+},0);
+console.log(sumaTotal);
+
+
+const words = ['Hola', 'Mundo', 'JavaScript'];
+const frase = words.reduce((acumulador, redu)=>{
+    return acumulador + ' ' + redu; 
+})
+console.log(frase);
 
 /*
 //Find
@@ -187,3 +228,19 @@ document.querySelectorAll('.resaltado').forEach((obj, i)=> {
     obj.style.backgroundColor ='red';
     obj.textContent = i; //Cambia la h por el índice.
     });
+
+
+    const arrayNew =[
+        {"libro": "El Túnel",
+    "autor": "Ernesto Sabato"},
+    {
+        "libro": "El Guardián Entre El Centeno",
+        "autor": "JD Salinger"
+    }
+    ];
+    const biblioteca = arrayNew.map(bi => bi.autor);
+    console.log(biblioteca)
+    const encontrar = arrayNew.find(en =>{
+        return en.autor =="Ernesto Sabato"
+    });
+    console.log(encontrar);
